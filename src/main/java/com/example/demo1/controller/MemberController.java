@@ -28,5 +28,10 @@ public class MemberController {
 		mv.addObject("list", list);
 		return mv;
 	}
-	
+	@RequestMapping("/")
+	public ModelAndView main() {
+		log.info("========================== MemberController(/main) ==================================");
+		ModelAndView mv=new ModelAndView("/main");
+		return mv;
+	}	
 }
