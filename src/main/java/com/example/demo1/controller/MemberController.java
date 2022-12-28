@@ -19,6 +19,11 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 	
+	@RequestMapping("/test")
+	public String test() {
+		log.info("========================== MemberController(/test) ==================================");
+		return "test";
+	}
 	
 	@RequestMapping("/member/list")
 	public ModelAndView memberList() {
